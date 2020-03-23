@@ -1,0 +1,12 @@
+.row.row--short.relative
+  .row__medium-1-2
+    = image_tag 'https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/front_end_books.jpg', :alt => 'Chazona Baum', :class => 'img--full-height img--background img--grayscaled'
+    .overlay.overlay--dark-color
+.page-section
+  .container
+    %h2.section-title Part 1. #{@resource_topic.title}
+    .generic-content-container
+      = render partial: 'resource_items/resource_item', collection: @resource_topic.resource_items
+
+
+

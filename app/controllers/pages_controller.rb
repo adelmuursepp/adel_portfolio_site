@@ -1,6 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  # skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    @posts = Blog.limit(3)
+
+  end
+
+  def about
+    @page_title = "About"
+
   end
 end

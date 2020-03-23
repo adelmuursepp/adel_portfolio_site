@@ -1,0 +1,2 @@
+class ResourceItemsController < ApplicationController
+end

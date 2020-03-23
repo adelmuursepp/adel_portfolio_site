@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{"name" => "charset", "content" => "utf-8"}
+    %meta{"name" => "viewport", "content" => "width=device-width", "initial-scale" => 1, "shrink-to-fit" => "no"}
+    %title= @page_title
+    = csrf_meta_tags
+    %meta{"name" => "description", "content" => ""}
+    %meta{"name" => "author", "content" => "Chazona Baum"}
+    %meta{"name" => "keywords", "content" => ""}
+    %meta{"name" => "twitter:card", "content" => "summary_large_image"}
+    %meta{"name" => "twitter:site", "content" => "@chznbaum"}
+    %meta{"name" => "twitter:creator", "content" => "@chznbaum"}
+    %meta{"name" => "twitter:title", "content" => @page_title}
+    %meta{"name" => "twitter:description", "content" => "The personal portfolio site of Chazona Baum, full stack developer."}
+    %meta{"name" => "twitter:image", "content" => "https://https://s3.amazonaws.com/chazona-portfolio-bucket/uploads/assets/images/typing.jpg"}
+
+    = stylesheet_pack_tag 'blogs'
+
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render "shared/application_nav"
+    - if flash['alert'] || flash['notify'] || flash['error']
+      %div.alert__alert-box
+        = alerts
+    = yield
+    = render "shared/application_footer"
