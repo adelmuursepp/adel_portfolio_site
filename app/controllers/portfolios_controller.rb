@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  skip_before_action :authenticate_user!
+
   layout 'portfolio'
   access all: [:show, :index, :ruby_on_rails, :vue], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
