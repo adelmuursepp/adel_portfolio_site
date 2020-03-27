@@ -1,4 +1,6 @@
 %div
-  %h2= link_to resource_item.title, resource_item.url
-  %p= resource_item.body
+  %h2= resource_item.title
+  .generic-content-container
+    %p= markdown resource_item.body
+
 
