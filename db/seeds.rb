@@ -245,6 +245,11 @@ Here is some of my advice and resources I wish I had known before boot camp.
 Preparing for boot camps is not necessary, you would finish the boot camp anyway, however there is absolutely no limit to being prepared. The more you know, the more you will find coding fun and gain a better understanding.
 
 **Disclaimer:** As I am a person who wanted to be extremely prepared, I would do tens of courses, memorize everything and during boot camp not sleep to make sure I was on top of the material. This is in no way necessary, but I have to admit, extra work paid off. 📚 Point is: just do as much as you can and don\'t stress about being unprepared - I promise some people will have done nothing, you are already fine!💪
+
+**Using resources while website is developed:**
++ If the link doesn\'t work, go to the Home page and use the links to go to Resources.
++ When you get errors on clicking random stuff on website, just go to Home page and find Resources 😊
++ Tell me what is the error and I\'ll help out!
 '
 
 topic_1 = '
@@ -268,23 +273,27 @@ No worries, it is not about learning 10 new languages, just little extras that I
 
 #### Try to make a Figma app prototype
 
-**Why?** Figma is the application to make design for your app. When developing apps, you will probably have a day to make a design for the app.
-Not being able to place everything and make use of it will frustrate you a little and will give not so nice design.
+**Why?** Figma is the application to make design for your app. When developing apps, you will probably have a day to make a design for the app. Not being able to place everything and make use of it will frustrate you a little and will give not so nice design.
 
-**What?** Make an app for bike rental, dog walking. I made a dating app for example...
-A dating app for a client on Figma: [Dating app link](https://www.figma.com/file/uKIw2CtcWRFfzVyzd2Jwb2/dating-ios)
-
+**What?** Make an app for bike rental, dog walking. I made a dating app for example... A dating app for a client on Figma: [Dating app link](https://www.figma.com/file/uKIw2CtcWRFfzVyzd2Jwb2/dating-ios)
 
 Hint: There are also beautiful templates that you can download and make use of
 
 
 #### Try to put a very easy Rails app on web
 
-**Why?** It is a sneak peek into what will be coming. It is just interesting to know
-what you will be working towards 🧑‍💻
+**Why?** It is a sneak peek into what will be coming. It is just interesting to know what you will be working towards 🧑‍💻
 
 **What?** Very easy basic commands. Using Rails Girls tutorial that is available here:
 [Easy Rails tutorial](http://guides.railsgirls.com/app)
+
+
+#### Complete Ruby on Rails 101 Challenges
+
+**Why?** Understand what it means when you will be submitting all the questions in the boot camp. It is also the best way to actually practice git. This is also where people get most confused and very angry because they really don\'t understand what is going on. It is very important to understand how git works.
+
+**What?** Le Wagon has some public exercises on Github that anyone can try out. They are in the same format as the ones you will be doing. Using them, however, requires Ruby up and running on your machine.
+Link: [Ruby 101 Challenges link](https://github.com/lewagon/ruby-101-challenges)
 '
 
 tips_item = '
