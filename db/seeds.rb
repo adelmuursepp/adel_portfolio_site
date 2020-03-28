@@ -249,7 +249,13 @@ Preparing for boot camps is not necessary, you would finish the boot camp anyway
 **Using resources while website is developed:**
 + If the link doesn\'t work, go to the Home page and use the links to go to Resources.
 + When you get errors on clicking random stuff on website, just go to Home page and find Resources 😊
++ Website isn\'t yet configured for the phone
 + Tell me what is the error and I\'ll help out!
+
+
+**Some proposals for covering material**
++ Let me know if you want me to explain the slides so you can take notes at the same time or you want to do it before and we can practise it in the terminal. However you learn best.
++ I think bigger periods between classes leave room for homework and in the end more material can be learned (like a week?). However, if you don\'t like learning alone with homework, shorter periods also work.
 '
 
 topic_1 = '
@@ -263,6 +269,32 @@ topic_1 = '
 Learn to use terminal on your computer. The excellent link for learning: [Terminal basics](https://www.learnenough.com/command-line-tutorial/basics)
 **How?** Learning about terminal is where you want to **memorize** words. I went through every page of tutorial, wrote flash cards about every command and made sure I knew everything from memory. It is not necessary to study so much 🤓 but in the end I could actually somehow understand what was going on in the boot camp.
 '
+
+
+topic_2 = '
+---
+### Objectives
++ Understand that Ruby has different classes: String, Integer, Array, ...
++ Know how to switch between classes using .to_a, .to_i, .to_s
++ Know that each class has different methods and they can be looked up here: [Ruby documentation](https://ruby-doc.org/core-2.6.5/) 👈 Yes, you do have to look it up yourself, **nobody** will be very happy to explain stuff that is in the docs already.
+
+
+### Learning
+**How?** I know that I like writing conspect to notebook far more than an average person. I think I got two full notebooks for Ruby conspect. This is why I would recommend writing it up and memorizing, but if you think you remember theory somehow else, use your own methods 📓
+Link to Ruby basic classes lecture: [Ruby basic classes](https://rubygarage.github.io/slides/ruby-basics#/3/1)
+
+
+### Homework
+Doing Codecademy exercises.
+**How?** Practicing and using Ruby documentation.
+
+
+### Extra
+Subscribe to Ruby weekly newsletter: [Ruby Newsletter link](https://rubyweekly.com/)
+'
+
+
+
 
 hands_on_item = '
 ---
@@ -298,11 +330,13 @@ Link: [Ruby 101 Challenges link](https://github.com/lewagon/ruby-101-challenges)
 
 tips_item = '
 ---
-### Tips for learning how to better code
+### Tips for learning how to code better
 
-+ Try to read Medium articles about coding. Medium is the place where you can catch up with trends in the code world and sound smart when talking to professional developers😉 Try out little tutorials about terminal for example. As I do Data Science, I follow Towards Data Science thread. Try it out: [Medium](medium.com)
++ Stay curious. Coding requires discipline in the beginning. It seems like regular boring work at times. But actually it is the best possible work you could have- you are learning about how our entire world is put on internet and building apps like none of your friends are able to. Get interested and google everything that you want to ask, try to know more than is needed - this way you are not only remembering text, but understanding what you are building. Some of my favourite googlings: [What is browser?](https://developers.google.com/web/updates/2018/09/inside-browser-part1), [How internet works?](http://www.steves-internet-guide.com/http-basics/)
 
-+ Think how you can make flash cards for yourself easily - coding is like a language, you need to memorize words to be able to speak it. sI would personally do 50 flash cards **every day**. And then review them. Although paper works, I think Flash Cards Go is a decent app as well 👈
++ Try to read Medium articles about coding (maybe every day?). Medium is the place where you can catch up with trends in the code world and sound smart when talking to professional developers😉 Try out little tutorials about terminal for example. As I do Data Science, I follow Towards Data Science thread. Try it out: [Medium](medium.com)
+
++ Think how you can make flash cards for yourself easily - coding is like a language, you need to memorize words to be able to speak it. I would personally do 50 flash cards **every day**. And then review them. Although paper works, I think Flash Cards Go is a decent app as well 👈
 
 + Learn to type using all ten fingers just right and practise typing as much as possible (It is a good motivation for dull work on Word 🤓)
 
@@ -319,6 +353,10 @@ ResourceItem.create!(title: 'Introduction',
 
 ResourceItem.create!(title: 'Topic 1. Using Terminal',
                       body: topic_1,
+                      resource_topic_id: ResourceTopic.last.id)
+
+ResourceItem.create!(title: 'Topic 2. Learning Ruby Classes',
+                      body: topic_2,
                       resource_topic_id: ResourceTopic.last.id)
 
 # ResourceItem.create!(title: "Rails Boot Camp Prep",
