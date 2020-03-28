@@ -423,6 +423,10 @@ ResourceItem.create!(title: 'Topic 3. Learning Ruby Classes',
                       body: topic_3,
                       resource_topic_id: ResourceTopic.last.id)
 
+ResourceItem.create!(title: 'Topic 4. Using Github',
+                      body: topic_4,
+                      resource_topic_id: ResourceTopic.last.id)
+
 # ResourceItem.create!(title: "Rails Boot Camp Prep",
 #                       body: markdown_sample,
 #                       resource_topic_id: ResourceTopic.last.id)
