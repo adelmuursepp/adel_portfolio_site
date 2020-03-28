@@ -345,6 +345,7 @@ Cloning a project and committing (done!)
 | ==git push== | push commit(s) to remote repository on your account |
 | ==git status== | show uncommited changes |
 
+*Material used from: RubyGarage*
 '
 
 
@@ -385,19 +386,25 @@ tips_item = '
 ---
 ### Tips for learning how to code better
 
+Those are not necessary but all useful👍✨
+
 + Stay curious. Coding requires discipline in the beginning. It seems like regular boring work at times. But actually it is the best possible work you could have- you are learning about how our entire world is put on internet and building apps like none of your friends are able to. Get interested and google everything that you want to ask, try to know more than is needed - this way you are not only remembering text, but understanding what you are building. Some of my favourite googlings: [What is browser?](https://developers.google.com/web/updates/2018/09/inside-browser-part1), [How internet works?](http://www.steves-internet-guide.com/http-basics/)
 
 + Try to read Medium articles about coding (maybe every day?). Medium is the place where you can catch up with trends in the code world and sound smart when talking to professional developers😉 Try out little tutorials about terminal for example. As I do Data Science, I follow Towards Data Science thread. Try it out: [Medium](medium.com)
 
 + Think how you can make flash cards for yourself easily - coding is like a language, you need to memorize words to be able to speak it. I would personally do 50 flash cards **every day**. And then review them. Although paper works, I think Flash Cards Go is a decent app as well 👈
 
-+ Learn to type using all ten fingers just right and practise typing as much as possible (It is a good motivation for dull work on Word 🤓)
++ Learn to type using all ten fingers just right and practise typing as much as possible (It is a good motivation for dull work on Word 🤓). [Keybr](keybr.com) is the absolute best for practise. Another thing you can do, is to make your keys different color for each finger. As I didn\'t want to do it, I drawed a colorful keyboard on paper and practiced on it. 💁‍♀️
+
++ Know how to find all the symbols on keyboard. Keyboard map works well, but know how to use Keyboard Viewer.
 
 + Learn basic Spectacle short cuts so you can fit multiple screens easily and be a more efficient coder💪
 
 + Drop Safari. No other browser than Chrome will be used for two months. If you want, remember a couple short cuts that you like using in Chrome.
 
 + Post a question on Stack Overflow. Stack Overflow and its coding community will be your best friend for the time. It is nice to get used to it and know how to find answers. (For example I got my whole project fixed by a random dude)
+
++ If you **really** love using a mouse with computer, you can do it. It is not common though, better and faster is to navigate with shortcuts than clicking on pages.
 '
 
 ResourceItem.create!(title: 'Introduction',
