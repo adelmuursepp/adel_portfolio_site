@@ -11,6 +11,7 @@ gem 'rails', '6.0.2.1'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'webpacker'
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-  gem 'faker'
 end
 
  source 'https://rubygems.org'
