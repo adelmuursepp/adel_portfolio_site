@@ -274,15 +274,35 @@ Learn to use terminal on your computer. The excellent link for learning: [Termin
 topic_2 = '
 ---
 ### Objectives
++ Understand how to use logic when talking to computer (`if` this `then` do this)
+
+
+### Learning
+**Why?** Understand the theory for Codecademy exercises, feel comfortable thinking like a programmer
+**How?** Remember the material and try to use in the terminal
+Link to Conditional Statements lecture (use the arrow down): [Conditional statements](https://rubygarage.github.io/slides/ruby-basics#/14)
+
+### Homework
+Doing Codecademy exercises.
+**How?** Practicing and using Ruby documentation.
+
+
+'
+
+
+topic_3 = '
+---
+### Objectives
 + Understand that Ruby has different classes: String, Integer, Array, ...
 + Know how to switch between classes using .to_a, .to_i, .to_s
 + Know that each class has different methods and they can be looked up here: [Ruby documentation](https://ruby-doc.org/core-2.6.5/) 👈 Yes, you do have to look it up yourself, **nobody** will be very happy to explain stuff that is in the docs already.
 
 
 ### Learning
+**Why?** Remember talking about OOP? Object oriented programming is the most important principle to master and classes are what make up OOP.
 **How?** I know that I like writing conspect to notebook far more than an average person. I think I got two full notebooks for Ruby conspect. This is why I would recommend writing it up and memorizing, but if you think you remember theory somehow else, use your own methods 📓
 Link to Ruby basic classes lecture: [Ruby basic classes](https://rubygarage.github.io/slides/ruby-basics#/3/1)
-
+Link to using Number class: [Ruby Numbers](http://rubylearning.com/satishtalim/numbers_in_ruby.html)
 
 ### Homework
 Doing Codecademy exercises.
@@ -291,6 +311,7 @@ Doing Codecademy exercises.
 
 ### Extra
 Subscribe to Ruby weekly newsletter: [Ruby Newsletter link](https://rubyweekly.com/)
+Fast explanation of OOP in Ruby: [OOP in Ruby](https://launchschool.com/books/oo_ruby/read/the_object_model#whyobjectorientedprogramming)
 '
 
 
@@ -355,8 +376,12 @@ ResourceItem.create!(title: 'Topic 1. Using Terminal',
                       body: topic_1,
                       resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: 'Topic 2. Learning Ruby Classes',
+ResourceItem.create!(title: 'Topic 2. Conditional Statements',
                       body: topic_2,
+                      resource_topic_id: ResourceTopic.last.id)
+
+ResourceItem.create!(title: 'Topic 3. Learning Ruby Classes',
+                      body: topic_3,
                       resource_topic_id: ResourceTopic.last.id)
 
 # ResourceItem.create!(title: "Rails Boot Camp Prep",
