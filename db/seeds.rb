@@ -315,6 +315,45 @@ Fast explanation of OOP in Ruby: [OOP in Ruby](https://launchschool.com/books/oo
 '
 
 
+topic_4 = '
+---
+### Objectives
++ Understand what is Git and Github
++ Make a Github account
+
+
+### Learning
+**Why?** Understand what Git is used for
+**How?** Write a conspect for the slides and print out/write out on paper the commands so you have it by your side when you need it (everyone does so). Ask me what is kind of messy or look up on Youtube.
+Link to Github lecture: [Github theory](https://rubygarage.github.io/slides/git/basics#/)
+
+### Homework
+Cloning a project and committing (done!)
+**How?** Using Github slides and learned commands
+
+
+### Fast Cheat Sheet
+
+| Column A | Column B | Column C |
+|----------+----------+----------|
+| Cell A1  | Cell B1  | Cell C1  |
+| Cell A2  | Cell B2  | Cell C2  |
+| Cell A3  | Cell B3  | Cell C3  |
+
+
+| Command | Description |
+----------+-------------|
+| git clone | clone repository into a local directory |
+| git init | repository setup, start git |
+| git pull | take code from internet, from your account |
+| git add | add files to queue for next commit |
+| git commit | commit added files |
+| git log | view a log of commits |
+| git push | push commit(s) to remote repository on your account |
+| git status | show uncommited changes |
+
+'
+
 
 
 hands_on_item = '
