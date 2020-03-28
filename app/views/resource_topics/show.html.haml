@@ -4,7 +4,7 @@
     .overlay.overlay--dark-color
 .page-section
   .container
-    %h2.section-title @resource_topic.title
+    %h2.section-title= @resource_topic.title
     .generic-content-container
       = render partial: 'resource_items/resource_item', collection: @resource_topic.resource_items
 
