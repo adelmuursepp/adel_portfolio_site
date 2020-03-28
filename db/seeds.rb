@@ -334,23 +334,16 @@ Cloning a project and committing (done!)
 
 ### Fast Cheat Sheet
 
-| Column A | Column B | Column C |
-|----------+----------+----------|
-| Cell A1  | Cell B1  | Cell C1  |
-| Cell A2  | Cell B2  | Cell C2  |
-| Cell A3  | Cell B3  | Cell C3  |
-
-
 | Command | Description |
 ----------+-------------|
-| git clone | clone repository into a local directory |
-| git init | repository setup, start git |
-| git pull | take code from internet, from your account |
-| git add | add files to queue for next commit |
-| git commit | commit added files |
-| git log | view a log of commits |
-| git push | push commit(s) to remote repository on your account |
-| git status | show uncommited changes |
+| ==git clone== | clone repository into a local directory |
+| ==git init== | repository setup, start git |
+| ==git pull== | take code from internet, from your account |
+| ==git add== | add files to queue for next commit |
+| ==git commit== | commit added files |
+| ==git log== | view a log of commits |
+| ==git push== | push commit(s) to remote repository on your account |
+| ==git status== | show uncommited changes |
 
 '
 
