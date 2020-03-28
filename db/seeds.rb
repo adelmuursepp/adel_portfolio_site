@@ -245,11 +245,6 @@ Here is some of my advice and resources I wish I had known before boot camp.
 Preparing for boot camps is not necessary, you would finish the boot camp anyway, however there is absolutely no limit to being prepared. The more you know, the more you will find coding fun and gain a better understanding.
 
 **Disclaimer:** As I am a person who wanted to be extremely prepared, I would do tens of courses, memorize everything and during boot camp not sleep to make sure I was on top of the material. This is in no way necessary, but I have to admit, extra work paid off. 📚 Point is: just do as much as you can and don\'t stress about being unprepared - I promise some people will have done nothing, you are already fine!💪
-
-
-
-
-
 '
 
 topic_1 = '
@@ -262,11 +257,6 @@ topic_1 = '
 ### Homework
 Learn to use terminal on your computer. The excellent link for learning: [Terminal basics](https://www.learnenough.com/command-line-tutorial/basics)
 **How?** Learning about terminal is where you want to **memorize** words. I went through every page of tutorial, wrote flash cards about every command and made sure I knew everything from memory. It is not necessary to study so much 🤓 but in the end I could actually somehow understand what was going on in the boot camp.
-
-
-
-
-
 '
 
 hands_on_item = '
@@ -295,11 +285,6 @@ what you will be working towards 🧑‍💻
 
 **What?** Very easy basic commands. Using Rails Girls tutorial that is available here:
 [Easy Rails tutorial](http://guides.railsgirls.com/app)
-
-
-
-
-
 '
 
 tips_item = '
@@ -317,10 +302,6 @@ tips_item = '
 + Drop Safari. No other browser than Chrome will be used for two months. If you want, remember a couple short cuts that you like using in Chrome.
 
 + Post a question on Stack Overflow. Stack Overflow and its coding community will be your best friend for the time. It is nice to get used to it and know how to find answers. (For example I got my whole project fixed by a random dude)
-
-
-
-
 '
 
 ResourceItem.create!(title: 'Introduction',
