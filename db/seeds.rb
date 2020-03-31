@@ -289,8 +289,65 @@ Doing Codecademy exercises.
 
 '
 
-
 topic_3 = '
+---
+### Objectives
++ Understand the differencwe between defining and calling methods
++ Understand arguments and parameters
++ Understand that methods are used for saving logic
+
+
+### Learning
+**Why?** Every coding language has methods and this allows you to structure your code
+**How?**
+Link to Methods lecture (use the arrow down): [Methods](https://rubygarage.github.io/slides/ruby-basics#/15)
+
+
+### Materials
+
+Finding the leap year: [Microsoft guide for leap year](https://docs.microsoft.com/en-us/office/troubleshoot/excel/determine-a-leap-year)
+
+```ruby
+year = 2020
+
+def divisible_by_4(year)
+  if year % 4 == 0
+    divisible_by_100(year)
+  else
+    # to let know that it is not a leap year
+    false
+  end
+end
+
+
+def divisible_by_100(year)
+  if year % 100 == 0
+    divisible_by_400(year)
+  else
+    true
+  end
+end
+
+
+def divisible_by_400(year)
+  if year % 400 == 0
+    true
+  else
+    false
+  end
+end
+
+print(divisible_by_4(year))
+```
+
+### Homework
+Reviewing, look at the slides if you have time
+
+
+'
+
+
+topic_4 = '
 ---
 ### Objectives
 + Understand that Ruby has different classes: String, Integer, Array, ...
@@ -315,7 +372,7 @@ Fast explanation of OOP in Ruby: [OOP in Ruby](https://launchschool.com/books/oo
 '
 
 
-topic_4 = '
+topic_5 = '
 ---
 ### Objectives
 + Understand what is Git and Github
@@ -419,12 +476,16 @@ ResourceItem.create!(title: 'Topic 2. Conditional Statements',
                       body: topic_2,
                       resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: 'Topic 3. Learning Ruby Classes',
+ResourceItem.create!(title: 'Topic 3. Learning methods',
                       body: topic_3,
                       resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: 'Topic 4. Using Github',
+ResourceItem.create!(title: 'Topic 4. Learning Ruby Classes',
                       body: topic_4,
+                      resource_topic_id: ResourceTopic.last.id)
+
+ResourceItem.create!(title: 'Topic 5. Using Github',
+                      body: topic_5,
                       resource_topic_id: ResourceTopic.last.id)
 
 # ResourceItem.create!(title: "Rails Boot Camp Prep",
