@@ -62,14 +62,19 @@ ResourceCategory.destroy_all()
 
 ResourceCategory.create!(title: "Coding- iOS")
 ResourceCategory.create!(title: "Coding- Rails")
+ResourceCategory.create!(title: "Coding- Python")
 
 puts "#{ResourceCategory.count} resource categories created."
 
 
 
 
-ResourceTopic.create!(title: "Rails Boot Camp Prep",
-                      intro: "Materials for preparing for Ruby on Rails boot camp.",
+# ResourceTopic.create!(title: "Rails Boot Camp Prep",
+#                       intro: "Materials for preparing for Ruby on Rails boot camp.",
+#                       resource_category_id: ResourceCategory.last.id)
+
+ResourceTopic.create!(title: "Learning Python",
+                      intro: "Materials for learning Python from the basics",
                       resource_category_id: ResourceCategory.last.id)
 
 puts "#{ResourceTopic.count} resource topics created."
@@ -464,41 +469,246 @@ Those are not necessary but all useful👍✨
 + If you **really** love using a mouse with computer, you can do it. It is not common though, better and faster is to navigate with shortcuts than clicking on pages.
 '
 
-ResourceItem.create!(title: 'Introduction',
-                      body: introduction_item,
-                      resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: 'Topic 1. Using Terminal',
-                      body: topic_1,
-                      resource_topic_id: ResourceTopic.last.id)
+python_1 =
 
-ResourceItem.create!(title: 'Topic 2. Conditional Statements',
-                      body: topic_2,
-                      resource_topic_id: ResourceTopic.last.id)
+# # # # # # # # # # # # # # # # # # # # # Ruby
 
-ResourceItem.create!(title: 'Topic 3. Learning methods',
-                      body: topic_3,
-                      resource_topic_id: ResourceTopic.last.id)
-
-ResourceItem.create!(title: 'Topic 4. Learning Ruby Classes',
-                      body: topic_4,
-                      resource_topic_id: ResourceTopic.last.id)
-
-ResourceItem.create!(title: 'Topic 5. Using Github',
-                      body: topic_5,
-                      resource_topic_id: ResourceTopic.last.id)
-
-# ResourceItem.create!(title: "Rails Boot Camp Prep",
-#                       body: markdown_sample,
+# ResourceItem.create!(title: 'Introduction',
+#                       body: introduction_item,
 #                       resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: "Hands on practicing",
-                      body: hands_on_item,
+# ResourceItem.create!(title: 'Topic 1. Using Terminal',
+#                       body: topic_1,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: 'Topic 2. Conditional Statements',
+#                       body: topic_2,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: 'Topic 3. Learning methods',
+#                       body: topic_3,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: 'Topic 4. Learning Ruby Classes',
+#                       body: topic_4,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: 'Topic 5. Using Github',
+#                       body: topic_5,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# # ResourceItem.create!(title: "Rails Boot Camp Prep",
+# #                       body: markdown_sample,
+# #                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: "Hands on practicing",
+#                       body: hands_on_item,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+# ResourceItem.create!(title: "Tips",
+#                       body: tips_item,
+#                       resource_topic_id: ResourceTopic.last.id)
+
+
+# # # # # # # # # # # # # # # # # # # # # Python
+
+python_introduction = '
+---
+
+Here will be gathered the materials for the classes
+
+**Using resources while website is developed:**
++ If the link doesn\'t work, go to the Home page and use the links to go to Resources.
++ When you get errors on clicking random stuff on website, just go to Home page and find Resources 😊
++ Website isn\'t yet configured for the phone
++ Tell me what is the error and I\'ll help out!
+
+'
+
+python_resources = '
+---
+
+Tartu University Python text book in Estonian that I used to learn Python: [Pythoni õpik](https://progeopik.cs.ut.ee/01_sissejuhatus.html)
+Quite fine Python textbook: [Practical Python](https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf)
+'
+
+python_1 = '
+---
+
+### Objectives
++ Learn how to use Pycharm for coding
+
+### Getting Started
++ This is the Welcome Screen for
+PyCharm.
+![PyCharm](https://resources.jetbrains.com/help/img/idea/2019.3/py_QST_WelcomeScreen.png)
++ You will see this when you
+open the IDE without a project
+open.
++ To start this tutorial, please
+press Create New Project.
++ You can open an existing
+project by hitting “Open”.
+
+### Creating a Project
++ The first thing you will need to
+do is type in your program
+name.
++ You can name it
+my_first_program or any
+other name that you desire.
++ After typing in your program
+name, hit the create button
+'
+
+python_2 = '
+---
+
+### Basics of a program
+
+```python
+temp = int(input("Enter a temperature in Celsius: ""))
+print("In Fahrenheit, that is", 9/5*temp+32)
+```
+
+### Typing things in
+
+**Case** Case matters. To Python, print, Print, and PRINT are all different things. For now, stick
+with lowercase as most Python statements are in lowercase.
+**Spaces** Spaces matter at the beginning of lines, but not elsewhere. For example, the code below
+will not work.
+```python
+temp = int(input("Enter a temperature in Celsius: ))
+          print("In Fahrenheit, that is", 9/5*temp+32)
+```
+Python uses indentation of lines for things we’ll learn about soon. On the other hand, spaces in
+most other places don’t matter. For instance, the following lines have the same effect:
+```python
+print("Hello world!")
+print ("Hello world!")
+print( "Hello world!" )
+```
+Basically, computers will only do what you tell them, and they often take things very literally.
+Python itself totally relies on things like the placement of commas and parentheses so it knows
+what’s what. It is not very good at figuring out what you mean, so you have to be precise. It will
+be very frustrating at first, trying to get all of the parentheses and commas in the right places, but
+after a while it will become more natural. Still, even after you’ve programmed for a long time, you
+will still miss something. Fortunately, the Python interpreter is pretty good about helping you find
+your mistakes.
+
+### Task - Create an ATM
+
+**Solution**
+```python
+balance=1000
+print("    ATM    ")
+print("""
+1)        Balance
+2)        Withdraw
+3)        Deposit
+4)        Quit
+
+
+""")
+Option=int(input("Enter Option: "))
+
+if Option==1:
+    print("Balance  € ",balance)
+
+
+if Option==2:
+    print("Balance  €  ",balance)
+    Withdraw=float(input("Enter Withdraw amount € "))
+    if Withdraw>0:
+        balance=(balance-Withdraw)
+        print("Current Balance  € ",balance)
+    elif Withdraw>balance:
+        print("No funds in account")
+    else:
+        print("None withdraw made")
+
+if Option==3:
+    print("Balance  € ",balance)
+    Deposit=float(input("Enter deposit amount € "))
+    if Deposit>0:
+        balance=(balance+Deposit)
+        print("Current balance  € ",balance)
+    else:
+        print("None deposit made")
+
+
+if Option==4:
+    exit()
+```
+
+**Advanced solution**
+```python
+balance=1000
+Option = 0
+
+while Option != 4:
+    print("    ATM    ")
+    print("""
+    1)        Balance
+    2)        Withdraw
+    3)        Deposit
+    4)        Quit
+
+
+    """)
+    Option=int(input("Enter Option: "))
+
+    if Option==1:
+        print("Balance  € ",balance)
+
+
+    if Option==2:
+        print("Balance  €  ",balance)
+        Withdraw=float(input("Enter Withdraw amount € "))
+        if Withdraw>0:
+            balance=(balance-Withdraw)
+            print("Current Balance  € ",balance)
+        elif Withdraw>balance:
+            print("No funds in account")
+        else:
+            print("None withdraw made")
+
+    if Option==3:
+        print("Balance  € ",balance)
+        Deposit=float(input("Enter deposit amount € "))
+        if Deposit>0:
+            balance=(balance+Deposit)
+            print("Current balance  € ", balance)
+        else:
+            print("None deposit made")
+
+
+    if Option==4:
+        exit()
+```
+
+
+'
+
+
+ResourceItem.create!(title: 'Introduction',
+                      body: python_introduction,
                       resource_topic_id: ResourceTopic.last.id)
 
-ResourceItem.create!(title: "Tips",
-                      body: tips_item,
+ResourceItem.create!(title: 'Resources',
+                      body: python_resources,
                       resource_topic_id: ResourceTopic.last.id)
+
+ResourceItem.create!(title: 'Topic 1. Using Pycharm',
+                      body: python_1,
+                      resource_topic_id: ResourceTopic.last.id)
+
+ResourceItem.create!(title: 'Topic 2. Python Basics',
+                      body: python_2,
+                      resource_topic_id: ResourceTopic.last.id)
+
+
 
 puts "#{ResourceItem.count} resource items created."
 

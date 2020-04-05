@@ -12,6 +12,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'webpacker'
 gem 'faker'
+gem 'revealjs-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
