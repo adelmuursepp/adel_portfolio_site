@@ -597,10 +597,15 @@ after a while it will become more natural. Still, even after you’ve programmed
 will still miss something. Fortunately, the Python interpreter is pretty good about helping you find
 your mistakes.
 
+### Materials
+Lecture 1: [Types, variables](http://slides.com/josearrieta-1/class1#/0/1)
+Lecture 2: [If-Elif and more](http://slides.com/josearrieta-1/class2#/0/1)
+
 ### Task - Create a calculator
 
 **Solution**
 To be posted soon ...🙃
+Hint: Check that you are performing math operations not in quotes (a+b)
 '
 
 python_3 = '
