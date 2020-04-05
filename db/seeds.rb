@@ -597,6 +597,15 @@ after a while it will become more natural. Still, even after you’ve programmed
 will still miss something. Fortunately, the Python interpreter is pretty good about helping you find
 your mistakes.
 
+### Task - Create a calculator
+
+**Solution**
+To be posted soon ...🙃
+'
+
+python_3 = '
+
+
 ### Task - Create an ATM
 
 **Solution**
@@ -688,9 +697,7 @@ while Option != 4:
         exit()
 ```
 
-
 '
-
 
 ResourceItem.create!(title: 'Introduction',
                       body: python_introduction,
