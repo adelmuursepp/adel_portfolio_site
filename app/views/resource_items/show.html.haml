@@ -8,7 +8,7 @@
     %p= "Published #{distance_of_time_in_words(@resource_item.created_at, Time.now)} ago"
     %p= pluralize @resource_item.resource_comments.count, "comment"
     %nav.breadcrumb
-      = link_to 'Home', root_url, class: "breadcrumb-item"
+      = link_to 'Classes', resource_topic_path(@resource_item.resource_topic_id), class: "breadcrumb-item"
       %span.breadcrumb-item.active= @resource_item.title
       - if logged_in?(:site_admin)
         %div
