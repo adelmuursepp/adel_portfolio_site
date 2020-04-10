@@ -21,6 +21,6 @@ class ResourceItem < ApplicationRecord
   end
 
   def self.by_recent
-    order("created_at DESC")
+    order("id ASC")
   end
 end
