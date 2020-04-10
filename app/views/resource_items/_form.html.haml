@@ -1,0 +1,29 @@
+%br
+%br
+%br
+%br
+%br
+%br
+
+= simple_form_for item do |f|
+  - if item.errors.any?
+    - item.errors.full_messages.each do |error|
+      = alert_generator(error, :error, "Error")
+  %div
+    = f.label :title
+    = f.text_field :title
+  %div
+    = f.label :created_at, "Publish Date"
+    = f.date_field :created_at, value: (item.created_at || Time.now)
+  %div
+    / = f.input :resource_topic_id, collection: ResourceTopic.all.map{|topic| [topic.title, topic.id]}, selected: 1, "aria-label" => "Topic"
+    = f.collection_select :resource_topic_id, ResourceTopic.all, :id, :title, {:prompt => "Please select a topic"}, "aria-label" => "Topic"
+  %div
+    = f.label :body
+    = f.text_area :body, rows: 15
+  %div
+    = f.input :photos, as: :file, input_html: { multiple: true }
+  %div
+    = f.submit
+
+/ # DONE

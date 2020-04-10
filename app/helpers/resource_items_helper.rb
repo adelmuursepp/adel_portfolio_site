@@ -1,4 +1,11 @@
 module ResourceItemsHelper
+  def gravatar_helper user
+    image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", class: 'img-fluid'
+  end
+
+  def resource_item_status_color resource_item
+    'color: #d9534f;' if resource_item.draft?
+  end
 
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)

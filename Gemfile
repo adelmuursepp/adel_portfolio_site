@@ -66,7 +66,7 @@ gem 'simplecov', '~> 0.16.1', group: :test
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # friendly_id for blog slugs
-gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'friendly_id' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
 # Authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'

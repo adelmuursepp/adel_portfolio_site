@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_150004) do
+ActiveRecord::Schema.define(version: 2020_04_10_133542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 2020_03_22_150004) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "resource_comments", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "resource_item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_item_id"], name: "index_resource_comments_on_resource_item_id"
+    t.index ["user_id"], name: "index_resource_comments_on_user_id"
+  end
+
   create_table "resource_items", force: :cascade do |t|
     t.string "title"
     t.string "url"
@@ -59,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_150004) do
     t.bigint "resource_topic_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status", default: 0
     t.index ["resource_topic_id"], name: "index_resource_items_on_resource_topic_id"
   end
 
@@ -86,6 +97,9 @@ ActiveRecord::Schema.define(version: 2020_03_22_150004) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "roles"
+    t.string "name"
+    t.integer "sign_in_count", default: 0, null: false
+    t.integer "failed_attempts", default: 30, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -93,6 +107,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_150004) do
   add_foreign_key "blogs", "topics"
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
+  add_foreign_key "resource_comments", "resource_items"
+  add_foreign_key "resource_comments", "users"
   add_foreign_key "resource_items", "resource_topics"
   add_foreign_key "resource_topics", "resource_categories"
 end

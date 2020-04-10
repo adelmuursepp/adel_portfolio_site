@@ -7,7 +7,7 @@ require("components/MobileMenu.js")
 require("components/PortfolioAlert.js")
 require("components/portfolios.js")
 require("components/StickyNav.js")
-//= require revealjs/reveal
 
+import "@fortawesome/fontawesome-free/css/all.css";
 import "bootstrap";
 import "../style/application.sass"
