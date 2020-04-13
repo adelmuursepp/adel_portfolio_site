@@ -170,6 +170,7 @@ textarea
   font-size: 100% // 2
   margin: 0 // 3
 
+
 // Addresses Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 button,
 input
@@ -231,9 +232,11 @@ input::-moz-focus-inner
 
 // 1. Removes default vertical scrollbar in IE 8/9.
 // 2. Improves readability and alignment in all browsers.
+// 3. Makes textarea fit mobile screen
 textarea
   overflow: auto // 1
   vertical-align: top // 2
+  width: 80vw
 
 // ##= TABLES ##=
 

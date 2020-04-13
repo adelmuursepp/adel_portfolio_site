@@ -1,5 +1,5 @@
 / - unless current_user.is_a? GuestUser
 = form_for [@resource_item, @resource_comment] do |f|
   %div.form-group
-    = f.text_area "content", "aria-label" => "Written answer", rows: 15, cols: 150
+    = f.text_area "content", "aria-label" => "Written answer", rows: 15
   = f.submit "Post the answer"

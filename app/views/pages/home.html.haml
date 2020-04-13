@@ -9,7 +9,7 @@
         = link_to "Learn More", about_path, :class => "button button--outline"
 .page-section.page-section--light-accent.relative
   .container.generic-content-container
-    %h2.section-title= "Welcome to my site where I rant about art and write about programming"
+    %h2.section-title.topic-title= "Writing code and poetry"
     .row
       .row__large-3-5
         %p
@@ -21,14 +21,14 @@
           :markdown
             Read about me ➡
   / = image_tag "https://res.cloudinary.com/adelcloud/image/upload/v1583609132/veebileht_ynlgb4.jpg", :height => "500", :width => "500", :alt => "Adel Müürsepp", :class => "img--absolute-br img--backward-until-large reveal-item"
-/ .page-section
-/   .container
-/     %h2.section-title= "I believe in service over process and focusing on users."
-/     %p= "I spent the past decade fighting for customers—getting to know what turns them off and what makes them glow with satisfaction. After observing time after time that many companies view their customers as an obstacle, I decided to pivot. Now I bring my user-centric experience to creating things for the web."
-/     %p= "From time to time, I'll share useful tidbits from my own experience working with front- and back-end development."
-/     = link_to blogs_path do
-/       :markdown
-/         More of my thoughts. ➡
+.page-section
+  .container
+    %h2.section-title.topic-title= "Coding material"
+    %p= "I have gathered together some amazing resources together for learning Python, Ruby and iOS"
+    / %p= ""
+    = link_to resource_categories_path do
+      :markdown
+        Check them out ➡
 / .page-section
 /   .container.container--narrow.container--centered.generic-content-container
 /     %h2.section-title= "Want to work together?"
