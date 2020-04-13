@@ -48,7 +48,7 @@ class ResourceItemsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @resource_item.update(item_params)
+      if @resource_item.update(item_update_params)
         format.html { redirect_to @resource_item, notice: 'The post has been updated.' }
       else
         format.html { render :edit }
@@ -82,7 +82,10 @@ class ResourceItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:resource_item).permit(:title, :body, :resource_topic_id, :status, :checbox, :created_at, questions_attributes: [:question_text, :option1, :explanation1, :option2, :explanation2, :option3, :explanation3], checkboxes_attributes: [:label])
+      params.require(:resource_item).permit(:title, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, questions_attributes: [:question_text, :option1, :explanation1, :option2, :explanation2, :option3, :explanation3], checkboxes_attributes: [:label])
+    end
+    def item_update_params
+      params.require(:resource_item).permit(:title, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, checkboxes_attributes: [:label])
     end
 
 
