@@ -1,4 +1,5 @@
 class ResourceCommentsController < ApplicationController
+  skip_before_action :authenticate_user!
   def create
     @resource_comment = ResourceComment.new(comment_params)
     @resource_comment.resource_item_id = params[:resource_item_id]

@@ -1,5 +1,5 @@
 class ResourceItemsController < ApplicationController
-  # skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!
 
   before_action :set_item, only: [:edit, :update, :destroy, :toggle_status]
   layout "resource_item"
