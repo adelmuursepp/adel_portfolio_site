@@ -15,6 +15,7 @@ class ResourceItemsController < ApplicationController
     # if logged_in?(:site_admin) || @resource_item.published?
     if true
       @resource_comment = ResourceComment.new
+      @resource_comment.resource_item_id = @resource_item.id
       @page_title = @resource_item.title
       # @seo_keywords = @resource_item.body
     else

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   end
 
   resources :resource_items, except: [:index] do
+    resources :resource_comments
     member do
       get :toggle_status
     end

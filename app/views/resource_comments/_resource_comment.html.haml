@@ -1,5 +1,2 @@
-%div
-  = gravatar_helper resource_comment.user
-  = "Posted by #{resource_comment.user.name} #{time_ago_in_words resource_comment.created_at} ago"
 .generic-content-container
   = markdown resource_comment.content

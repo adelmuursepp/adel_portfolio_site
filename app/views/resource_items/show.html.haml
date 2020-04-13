@@ -25,7 +25,10 @@
     / = render partial: 'checkboxes/checkbox', collection: @resource_item.checkboxes.by_recent
     %h4.section-title= "Quiz"
     = render partial: 'questions/question', collection: @resource_item.questions.by_recent
-    / %h4.section-title= "Comments"
-    /= render "resource_comments/resource_comment_form"
+    %h4.section-title= "Written tasks"
+    %p= "Write your answer to the question below. If in doubt, refer to the materials above. I'll review the answers 😊"
+    %p
+      = markdown @resource_item.written_task
     #comments{"data-resource_item-id" => @resource_item.id}
       = render partial: 'resource_comments/resource_comment', collection: @resource_item.resource_comments.by_recent
+    = render "resource_comments/resource_comment_form"

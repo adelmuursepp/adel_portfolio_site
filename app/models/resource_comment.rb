@@ -1,5 +1,5 @@
 class ResourceComment < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
   belongs_to :resource_item
 
   validates :content, presence: true, length: { minimum: 4, maximum: 1000 }
