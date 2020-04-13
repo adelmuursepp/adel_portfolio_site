@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_133542) do
+ActiveRecord::Schema.define(version: 2020_04_13_094802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 2020_04_10_133542) do
     t.integer "status", default: 0
     t.bigint "topic_id"
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
+  end
+
+  create_table "checkboxes", force: :cascade do |t|
+    t.text "label"
+    t.integer "checked"
+    t.bigint "user_id"
+    t.bigint "resource_item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_item_id"], name: "index_checkboxes_on_resource_item_id"
+    t.index ["user_id"], name: "index_checkboxes_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -44,6 +55,20 @@ ActiveRecord::Schema.define(version: 2020_04_10_133542) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "position"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "question_text"
+    t.text "option1"
+    t.text "option2"
+    t.text "option3"
+    t.text "explanation1"
+    t.text "explanation2"
+    t.text "explanation3"
+    t.bigint "resource_item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_item_id"], name: "index_questions_on_resource_item_id"
   end
 
   create_table "resource_categories", force: :cascade do |t|
@@ -105,8 +130,11 @@ ActiveRecord::Schema.define(version: 2020_04_10_133542) do
   end
 
   add_foreign_key "blogs", "topics"
+  add_foreign_key "checkboxes", "resource_items"
+  add_foreign_key "checkboxes", "users"
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
+  add_foreign_key "questions", "resource_items"
   add_foreign_key "resource_comments", "resource_items"
   add_foreign_key "resource_comments", "users"
   add_foreign_key "resource_items", "resource_topics"

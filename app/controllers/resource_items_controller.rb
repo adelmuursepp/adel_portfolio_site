@@ -24,6 +24,8 @@ class ResourceItemsController < ApplicationController
 
   def new
     @resource_item = ResourceItem.new
+    10.times { @resource_item.questions.build }
+    5.times { @resource_item.checkboxes.build }
     @page_title = "Create a New Post"
   end
 
@@ -79,7 +81,8 @@ class ResourceItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:resource_item).permit(:title, :body, :resource_topic_id, :status, :created_at)
+      params.require(:resource_item).permit(:title, :body, :resource_topic_id, :status, :checbox, :created_at, questions_attributes: [:question_text, :option1, :explanation1, :option2, :explanation2, :option3, :explanation3], checkboxes_attributes: [:label])
     end
+
 
 end

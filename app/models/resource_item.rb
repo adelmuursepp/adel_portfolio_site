@@ -8,6 +8,9 @@ class ResourceItem < ApplicationRecord
 
 
   has_many :resource_comments, dependent: :destroy
+  has_many :checkboxes, dependent: :destroy
+  has_many :questions, dependent: :destroy
+  accepts_nested_attributes_for :questions, reject_if: lambda {|attributes| attributes['question_text'].blank?}
 
 
   scope :hide_drafts, -> { where(status: 'published') }
@@ -21,6 +24,6 @@ class ResourceItem < ApplicationRecord
   end
 
   def self.by_recent
-    order("id ASC")
+    order("created_at ASC")
   end
 end
