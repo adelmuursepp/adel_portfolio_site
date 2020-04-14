@@ -28,8 +28,9 @@
     %h4.section-title.topic-title= "Written tasks"
     %p= "Write your answer to the question below. If in doubt, refer to the materials above. I'll review the answers 😊"
     %p= "You can also post any links or questions about the topic"
-    %p
-      = markdown @resource_item.written_task
+    - if @resource_item.written_task
+      %p
+        = markdown @resource_item.written_task
     #comments{"data-resource_item-id" => @resource_item.id}
       = render partial: 'resource_comments/resource_comment', collection: @resource_item.resource_comments.by_recent
     = render "resource_comments/resource_comment_form"
