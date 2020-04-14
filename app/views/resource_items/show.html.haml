@@ -23,8 +23,9 @@
       = markdown @resource_item.body
     / %h4.section-title= "Tasks"
     / = render partial: 'checkboxes/checkbox', collection: @resource_item.checkboxes.by_recent
-    %h4.section-title.topic-title= "Quiz"
-    = render partial: 'questions/question', collection: @resource_item.questions.by_recent
+    - if @resource_item.questions.count > 2
+      %h4.section-title.topic-title= "Quiz"
+      = render partial: 'questions/question', collection: @resource_item.questions.by_recent
     %h4.section-title.topic-title= "Written tasks"
     %p= "Write your answer to the question below. If in doubt, refer to the materials above. I'll review the answers 😊"
     %p= "You can also post any links or questions about the topic"
