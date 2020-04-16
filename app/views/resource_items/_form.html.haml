@@ -20,7 +20,7 @@
     = f.collection_select :resource_topic_id, ResourceTopic.all, :id, :title, {:prompt => "Please select a topic"}, "aria-label" => "Topic"
   %div.form-group
     = f.label :body
-    = f.text_area :body, rows: 15, cols: 150
+    = f.text_area :body, rows: 80, cols: 150
   %div.form-group
     = f.label :WrittenTask
     = f.text_area :written_task, rows: 8, cols: 150
