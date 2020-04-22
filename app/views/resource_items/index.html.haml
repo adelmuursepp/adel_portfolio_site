@@ -7,6 +7,7 @@
         %h1.section-title= "Classes"
 .page-section
   .container
+    %iframe{:height =>"400px", :width => "100%", :src => "https://repl.it/repls/GoodSarcasticAdministrators?lite=true", :scrolling => "no", :frameborder => "no", :allowtransparency => "true", :allowfullscreen => "true", :sandbox => "allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"}
     = paginate @resource_items
     = render partial: 'resource_item', collection: @resource_items
     = paginate @resource_items

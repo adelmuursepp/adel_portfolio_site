@@ -82,10 +82,10 @@ class ResourceItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:resource_item).permit(:title, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, questions_attributes: [:question_text, :option1, :explanation1, :option2, :explanation2, :option3, :explanation3], checkboxes_attributes: [:label])
+      params.require(:resource_item).permit(:title, :cdong_task, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, questions_attributes: [:question_text, :option1, :explanation1, :option2, :explanation2, :option3, :explanation3], checkboxes_attributes: [:label])
     end
     def item_update_params
-      params.require(:resource_item).permit(:title, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, checkboxes_attributes: [:label])
+      params.require(:resource_item).permit(:title, :cdong_task, :body, :written_task, :resource_topic_id, :status, :checbox, :created_at, checkboxes_attributes: [:label])
     end
 
 

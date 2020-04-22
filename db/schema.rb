@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_133620) do
+ActiveRecord::Schema.define(version: 2020_04_22_155403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_133620) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "status", default: 0
     t.text "written_task"
+    t.string "cdong_task"
     t.index ["resource_topic_id"], name: "index_resource_items_on_resource_topic_id"
   end
 
