@@ -27,7 +27,7 @@
       %h4.section-title.topic-title= "Quiz"
       = render partial: 'questions/question', collection: @resource_item.questions.by_recent
 
-    - if @resource_item.cdong_task != nil
+    - if @resource_item.cdong_task != ""
       %h4.section-title.topic-title= "Coding"
     = render partial: 'cdong_task'
     - if @resource_item.written_task != nil

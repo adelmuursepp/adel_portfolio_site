@@ -12,7 +12,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'webpacker'
 gem 'faker'
-gem 'revealjs-rails'
+gem "animate-rails"
+# gem 'animate.css-rails', '~> 3.2.0'
 
 
 group :development do
